@@ -20,7 +20,7 @@ class JokeMachineControllerTest {
         Assertions.assertEquals(6, theJoke.numberOfJokes());
     }
 
-    @Test
+@Test
     void testGetSpecificJoke() {
         JokeMachineController theJoke = new JokeMachineController();
         Assertions.assertEquals("What's the best thing about Switzerland? - I don't know, but the flag is a big plus.", theJoke.getSpecificJoke(1));
