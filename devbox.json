@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "name": "java-devbox-test1",
+  "description": "Java develpment on any os. devbox installs everything, so this works the same on Linux, macOS and Windows (WSL2).",
+
+  "packages": [
+    // Java 21 (Eclipse Temurin)
+    "temurin-bin@21",
+    // Spring Boot CLI
+    "spring-boot-cli",
+    // Clients
+    "curl",
+    "postman"
+  ],
+
+  "env": {
+    // Points JAVA_HOME at the JDK devbox just installed
+    "JAVA_HOME": "$DEVBOX_PACKAGES_DIR"
+  },
+  "shell": {
+    "init_hook": [
+      "java --version"
+    ],
+    "scripts": {
+      "script-test": "echo 'Hello, World!'"
+    }
+  }
+}
